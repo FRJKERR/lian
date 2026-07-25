@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>被字句 · La oración pasiva · HSK 3 — Academia Lian</title>
+<meta name="description" content="La oración pasiva en chino (被字句) para HSK 3: cinco formas, ejemplos y ejercicios interactivos. Academia Lian de Chino Mandarín.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700&family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBFAF8; --surface:#FFFFFF; --surface-2:#F6F2EA;
+    --ink:#23201D; --ink-soft:#6A6055; --line:#ECE5D8; --line-soft:#F2ECE0;
+    --cinnabar:#B23A2E; --cinnabar-deep:#8C2A20; --gold:#A6792F;
+    --ok:#1E6B33; --ok-bg:#E7F1E9; --no:#B23A2E; --no-bg:#F6E6E3;
+    --shadow:0 10px 30px -18px rgba(60,40,20,.35);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif; font-size:16px; line-height:1.6;}
+  .han{font-family:"Noto Sans SC","Inter",sans-serif;}
+  h1,h2,h3,.brand,.tab{font-family:"Fraunces",Georgia,serif;}
+  a{color:var(--cinnabar); text-decoration:none;} a:hover{text-decoration:underline;}
+
+  .topbar{position:sticky; top:0; z-index:50; background:rgba(251,250,248,.9); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
+  .topbar .row{max-width:1060px; margin:0 auto; padding:12px 22px; display:flex; align-items:center; gap:16px; flex-wrap:wrap;}
+  .logomark{font-family:"Noto Sans SC",sans-serif; font-weight:700; font-size:1.35rem; color:#fff; background:var(--cinnabar);
+    width:40px; height:40px; border-radius:11px; display:flex; align-items:center; justify-content:center; box-shadow:2px 2px 0 var(--cinnabar-deep);}
+  .brand b{font-weight:600; font-size:.98rem; display:block; line-height:1.1;}
+  .brand span{font-size:.72rem; color:var(--ink-soft);}
+  .tabs{margin-left:auto; display:flex; gap:6px; background:var(--surface-2); padding:5px; border-radius:999px; border:1px solid var(--line);}
+  .tab{font-size:.82rem; font-weight:600; color:var(--ink-soft); background:transparent; border:0; padding:8px 15px; border-radius:999px; cursor:pointer; transition:.18s; white-space:nowrap;}
+  .tab:hover{color:var(--cinnabar);}
+  .tab.active{color:#fff; background:var(--cinnabar); box-shadow:1px 1px 0 var(--cinnabar-deep);}
+
+  .wrap{max-width:1060px; margin:0 auto; padding:26px 22px 90px;}
+  .titleblock{margin:18px 0 24px;}
+  .kick{color:var(--cinnabar); font-weight:600; font-size:.8rem; letter-spacing:.12em; text-transform:uppercase; font-family:"Fraunces",serif;}
+  h1{font-size:2.4rem; margin:.15em 0 0; font-weight:700; line-height:1.08;}
+  h1 .han{color:var(--cinnabar);}
+
+  .panel{display:none; animation:fade .25s ease;}
+  .panel.active{display:block;}
+  @keyframes fade{from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:none;}}
+
+  .acc{border:1px solid var(--line); border-radius:16px; background:var(--surface); overflow:hidden; margin:12px 0; box-shadow:var(--shadow);}
+  .acc-head{display:flex; align-items:center; gap:14px; width:100%; text-align:left; background:transparent; border:0; cursor:pointer;
+    padding:18px 20px; font-family:"Fraunces",serif; font-size:1.12rem; font-weight:600; color:var(--ink);}
+  .acc-head .idx{font-size:.8rem; color:#fff; background:var(--gold); border-radius:999px; padding:3px 11px; font-weight:600;}
+  .acc-head .arw{margin-left:auto; transition:.2s; color:var(--cinnabar); font-size:1.1rem;}
+  .acc.open .acc-head .arw{transform:rotate(90deg);}
+  .acc-body{display:none; padding:2px 20px 20px; border-top:1px solid var(--line-soft);}
+  .acc.open .acc-body{display:block;}
+
+  .formula{font-family:"Noto Sans SC",sans-serif; background:var(--surface-2); border:1px solid var(--line); border-left:4px solid var(--gold);
+    border-radius:12px; padding:12px 16px; margin:14px 0; font-size:1.05rem;}
+  .exp{color:var(--ink-soft); font-size:.96rem; margin:6px 0 0;}
+  .note{background:var(--surface-2); border-radius:12px; padding:12px 16px; margin:14px 0; font-size:.93rem;}
+  .note.warn{border-left:4px solid var(--cinnabar); background:var(--no-bg);}
+  .note b.lbl{color:var(--cinnabar); font-size:.74rem; letter-spacing:.06em; text-transform:uppercase; font-family:"Fraunces",serif;}
+  .bad{color:var(--no);} .good{color:var(--ok);}
+  .fixed{font-family:"Noto Sans SC",sans-serif;}
+
+  ul.ex{list-style:none; padding:0; margin:14px 0 4px;}
+  ul.ex li{padding:11px 14px; border:1px solid var(--line-soft); border-radius:12px; margin:8px 0; cursor:pointer; transition:.15s; background:var(--surface);}
+  ul.ex li:hover{border-color:var(--line); box-shadow:var(--shadow);}
+  .zh-ex{font-family:"Noto Sans SC",sans-serif; font-size:1.3rem; color:var(--ink);}
+  .py{display:none; color:var(--gold); font-size:.9rem; margin-top:3px;}
+  body.show-pinyin .py{display:block;}
+  .gloss{display:none; color:var(--ink-soft); font-style:italic; font-size:.9rem; margin-top:3px;}
+  li.reveal .gloss{display:block;}
+
+  /* botón pinyin */
+  #pybtn{position:fixed; right:22px; bottom:22px; z-index:99; display:inline-flex; align-items:center; gap:8px; padding:10px 16px;
+    font-family:"Fraunces",serif; font-weight:600; font-size:.8rem; letter-spacing:.06em; color:var(--ink-soft); background:var(--surface);
+    border:1px solid var(--line); border-radius:999px; box-shadow:var(--shadow); cursor:pointer; transition:.15s;}
+  #pybtn:hover{color:var(--cinnabar);}
+  #pybtn .h{font-family:"Noto Sans SC",serif; color:var(--cinnabar); font-size:1rem;}
+  body.show-pinyin #pybtn{color:#fff; background:var(--cinnabar); border-color:var(--cinnabar);}
+  body.show-pinyin #pybtn .h{color:#fff;}
+
+  /* ejercicios */
+  .ex-sub{display:flex; gap:8px; flex-wrap:wrap; margin:6px 0 18px;}
+  .ex-sub button{font-family:"Fraunces",serif; font-size:.8rem; font-weight:600; color:var(--ink-soft); background:var(--surface);
+    border:1px solid var(--line); padding:7px 14px; border-radius:999px; cursor:pointer; transition:.15s;}
+  .ex-sub button.active{color:#fff; background:var(--cinnabar); border-color:var(--cinnabar);}
+  .drill{display:none;} .drill.active{display:block;}
+  .q{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:16px 18px; margin:12px 0; box-shadow:var(--shadow);}
+  .q .stem{font-family:"Noto Sans SC",sans-serif; font-size:1.15rem; margin-bottom:10px;}
+  .opts{display:flex; flex-direction:column; gap:8px;}
+  .opt{font-family:"Noto Sans SC",sans-serif; font-size:1.08rem; text-align:left; background:var(--surface); border:1px solid var(--line);
+    padding:11px 14px; border-radius:11px; cursor:pointer; transition:.15s;}
+  .opt:hover{border-color:var(--cinnabar);}
+  .opt.correct{background:var(--ok-bg); border-color:var(--ok); color:var(--ok);}
+  .opt.wrong{background:var(--no-bg); border-color:var(--no); color:var(--no);}
+  .fb{display:none; margin-top:10px; padding-top:10px; border-top:1px dashed var(--line); font-size:.9rem; color:var(--ink-soft);}
+  .q.answered .fb{display:block;}
+  .fb .sol{font-family:"Noto Sans SC",sans-serif; color:var(--ink); font-size:1.05rem;}
+
+  .read{display:grid; grid-template-columns:repeat(3,1fr); gap:14px;}
+  @media(max-width:720px){ .read{grid-template-columns:1fr;} .tabs{width:100%; justify-content:space-between;} h1{font-size:1.9rem;} }
+  .read a.rc{display:block; background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:22px 20px; box-shadow:var(--shadow); transition:.18s; text-align:center;}
+  .read a.rc:hover{transform:translateY(-2px); border-color:var(--cinnabar); text-decoration:none;}
+  .read .zh{font-family:"Noto Sans SC",sans-serif; font-size:1.45rem; color:var(--cinnabar); font-weight:700;}
+
+  footer{margin-top:60px; padding:22px; border-top:1px solid var(--line); color:var(--ink-soft); font-size:.8rem; max-width:1060px; margin:60px auto 0;}
+  footer .lic{margin-top:8px; line-height:1.55;}
+  @media print{ .topbar,.ex-sub,#pybtn{display:none;} .panel{display:block!important;} .acc-body{display:block!important;} }
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="row">
+  <div class="logomark">连</div>
+  <div class="brand"><b>Academia Lian</b><span>de Chino Mandarín · 教学相长</span></div>
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-t="g">Gramática</button>
+    <button class="tab" data-t="e">Ejercicios</button>
+    <button class="tab" data-t="l">Lectura</button>
+  </nav>
+</div></div>
+
+<div class="wrap">
+  <div class="titleblock">
+    <div class="kick">HSK 3 · Gramática</div>
+    <h1>La oración pasiva · <span class="han">被字句</span></h1>
+  </div>
+
+  <!-- ============ GRAMÁTICA ============ -->
+  <div class="panel active" id="p-g">
+
+    <div class="acc open">
+      <button class="acc-head"><span class="idx">1</span> Básica: 被 / 叫 / 让 <span class="arw">›</span></button>
+      <div class="acc-body">
+        <div class="formula">Sujeto + 被 / 叫 / 让 + Objeto + Verbo + otros elementos</div>
+        <p class="exp">El sujeto es el paciente de la acción; el objeto es el agente.</p>
+        <ul class="ex">
+          <li><div class="zh-ex">我的面包被狗吃了。</div><div class="py">Wǒ de miànbāo bèi gǒu chīle.</div><div class="gloss">Mi pan se lo comió un perro.</div></li>
+          <li><div class="zh-ex">手机被谁拿走了？</div><div class="py">Shǒujī bèi shéi ná zǒule?</div><div class="gloss">¿Quién se llevó el celular?</div></li>
+          <li><div class="zh-ex">我喜欢的那台电脑叫别人买走了。</div><div class="py">Wǒ xǐhuān de nà tái diànnǎo jiào biérén mǎi zǒule.</div><div class="gloss">La computadora que me gustaba se la compró otra persona.</div></li>
+          <li><div class="zh-ex">雨伞叫弟弟借去了。</div><div class="py">Yǔsǎn jiào dìdi jiè qùle.</div><div class="gloss">El paraguas se lo llevó prestado mi hermano menor.</div></li>
+          <li><div class="zh-ex">蛋糕让同学们吃完了。</div><div class="py">Dàngāo ràng tóngxuémen chī wánle.</div><div class="gloss">El pastel se lo acabaron los compañeros.</div></li>
+          <li><div class="zh-ex">衣服让小猫弄脏了。</div><div class="py">Yīfu ràng xiǎomāo nòng zāng le.</div><div class="gloss">La ropa la ensució el gatito.</div></li>
+        </ul>
+        <div class="note"><b class="lbl">Omisión del agente</b><br>Tras 被 el objeto puede omitirse; tras 叫 o 让, no.
+          <div style="margin-top:8px;" class="fixed">帽子被（风）吹跑了。<span class="bad"> ✘ 帽子叫吹跑了。</span> → <span class="good">帽子叫风吹跑了。</span><span class="bad"> ✘ 帽子让吹跑了。</span> → <span class="good">帽子让风吹跑了。</span></div>
+        </div>
+        <div class="note warn"><b class="lbl">Negación y modales</b><br>Los adverbios negativos y los verbos modales van antes de 被.</div>
+        <ul class="ex">
+          <li><div class="zh-ex">问题没被解决。</div><div class="py">Wèntí méi bèi jiějué.</div><div class="gloss">El problema no se resolvió.</div></li>
+          <li><div class="zh-ex">病人还没被送到医院。</div><div class="py">Bìngrén hái méi bèi sòng dào yīyuàn.</div><div class="gloss">El paciente aún no ha sido llevado al hospital.</div></li>
+          <li><div class="zh-ex">明天孩子会被送去奶奶家。</div><div class="py">Míngtiān háizi huì bèi sòng qù nǎinai jiā.</div><div class="gloss">Mañana llevarán al niño a casa de la abuela.</div></li>
+          <li><div class="zh-ex">这个学生经常被老师表扬。</div><div class="py">Zhège xuéshēng jīngcháng bèi lǎoshī biǎoyáng.</div><div class="gloss">A este alumno lo elogia con frecuencia el profesor.</div></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="acc">
+      <button class="acc-head"><span class="idx">2</span> Agente omitido: 被 + Verbo <span class="arw">›</span></button>
+      <div class="acc-body">
+        <div class="formula">Sujeto + 被 + Verbo + otros elementos</div>
+        <p class="exp">El sujeto es el paciente; no hace falta mencionar al agente. Se enfatiza la acción.</p>
+        <ul class="ex">
+          <li><div class="zh-ex">公司的门早就被关上了。</div><div class="py">Gōngsī de mén zǎo jiù bèi guān shàng le.</div><div class="gloss">La puerta de la empresa ya estaba cerrada desde hacía rato.</div></li>
+          <li><div class="zh-ex">那个电脑被买走了。</div><div class="py">Nàgè diànnǎo bèi mǎi zǒu le.</div><div class="gloss">Esa computadora ya la compraron.</div></li>
+          <li><div class="zh-ex">他的父母被请去开会了。</div><div class="py">Tā de fùmǔ bèi qǐng qù kāihuì le.</div><div class="gloss">A sus padres los invitaron a una reunión.</div></li>
+        </ul>
+        <div class="note warn"><b class="lbl">Restricción</b><br>En esta forma no se usa con 给, 所 ni 把.
+          <div style="margin-top:8px;" class="fixed"><span class="bad">✘ 农田被所淹没了。</span> → <span class="good">农田被淹没了。</span> / 农田被大水所淹没了。<br><span class="bad">✘ 乔丹被给称为"飞人"。</span> → <span class="good">乔丹被称为"飞人"。</span> / 乔丹被大家给称为"飞人"。</div>
+        </div>
+        <div class="note"><b class="lbl">被 + monosílabo (frases fijas, matiz desfavorable)</b><br>
+          <span class="fixed">被盗</span> ser robado · <span class="fixed">被告</span> ser acusado · <span class="fixed">被迫</span> ser forzado · <span class="fixed">被捕</span> ser arrestado · <span class="fixed">被害</span> ser asesinado.</div>
+      </div>
+    </div>
+
+    <div class="acc">
+      <button class="acc-head"><span class="idx">3</span> Pasiva no marcada <span class="arw">›</span></button>
+      <div class="acc-body">
+        <div class="formula">Nombre (paciente) + Verbo + (otros)　·　neg.: Nombre + 没(有)/还没有 + Verbo</div>
+        <p class="exp">Pasiva sin marca (被/叫/让). Forma afirmativa con sentido pasivo; muy frecuente en el habla.</p>
+        <ul class="ex">
+          <li><div class="zh-ex">碗洗了吗？</div><div class="py">Wǎn xǐ le ma?</div><div class="gloss">¿Ya se lavaron los platos?</div></li>
+          <li><div class="zh-ex">衣服都穿破了！</div><div class="py">Yīfu dōu chuān pò le.</div><div class="gloss">La ropa ya está gastada de tanto usarla.</div></li>
+          <li><div class="zh-ex">晚饭做好了。</div><div class="py">Wǎnfàn zuò hǎo le.</div><div class="gloss">La cena ya está lista.</div></li>
+          <li><div class="zh-ex">作业没写完，不能去玩。</div><div class="py">Zuòyè méi xiě wán, bù néng qù wán.</div><div class="gloss">No he terminado la tarea, no puedo salir a jugar.</div></li>
+          <li><div class="zh-ex">饺子还没有煮好。</div><div class="py">Jiǎozi hái méiyǒu zhǔ hǎo.</div><div class="gloss">Los jiaozi todavía no están cocidos.</div></li>
+          <li><div class="zh-ex">这些衣服没有干。</div><div class="py">Zhè xiē yīfu méiyǒu gān.</div><div class="gloss">Esta ropa no está seca.</div></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="acc">
+      <button class="acc-head"><span class="idx">4</span> Refuerzo con 给 <span class="arw">›</span></button>
+      <div class="acc-body">
+        <div class="formula">Sujeto + 被 / 叫 / 让 + Objeto + 给 + Verbo + (otros) + 了</div>
+        <p class="exp">El agente no se puede omitir. Los adverbios (已经/常/都/就/还/曾经/早就) van antes de 被/叫/让. 给 refuerza el matiz pasivo y es omitible.</p>
+        <ul class="ex">
+          <li><div class="zh-ex">苹果被他给吃完了。</div><div class="py">Píngguǒ bèi tā gěi chīwán le.</div><div class="gloss">Las manzanas se las acabó él.</div></li>
+          <li><div class="zh-ex">事情都叫我们给做好了。</div><div class="py">Shìqíng dōu jiào wǒmen gěi zuò hǎo le.</div><div class="gloss">Todo lo dejamos hecho nosotros.</div></li>
+          <li><div class="zh-ex">房间全让小狗给弄乱了。</div><div class="py">Fángjiān quán ràng xiǎo gǒu gěi nòng luàn le.</div><div class="gloss">El cuarto entero lo desordenó el perrito.</div></li>
+          <li><div class="zh-ex">蛋糕都被他给吃了。</div><div class="py">Dàngāo dōu bèi tā gěi chī le.</div><div class="gloss">El pastel se lo comió todo él.</div></li>
+        </ul>
+        <div class="note warn"><b class="lbl">Negación</b><br>不要/别 pueden ir antes de 被/叫/让; 没(有) solo antes de 被.</div>
+        <ul class="ex">
+          <li><div class="zh-ex">他没有被警察抓走。</div><div class="py">Tā méiyǒu bèi jǐngchá zhuā zǒu.</div><div class="gloss">No se lo llevó la policía.</div></li>
+          <li><div class="zh-ex">手机不要叫小偷给偷走了。</div><div class="py">Shǒujī búyào jiào xiǎotōu gěi tōu zǒu le.</div><div class="gloss">Cuida el celular, que no te lo robe un ladrón.</div></li>
+          <li><div class="zh-ex">你别让他给骗了。</div><div class="py">Nǐ bié ràng tā gěi piàn le.</div><div class="gloss">No dejes que te engañe.</div></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="acc">
+      <button class="acc-head"><span class="idx">5</span> Literaria: 被…所 / 为…所 <span class="arw">›</span></button>
+      <div class="acc-body">
+        <div class="formula">Sujeto + 被 (o 为) + Objeto + 所 + Verbo</div>
+        <p class="exp">Registro escrito. 所 precede al verbo, que no lleva otros elementos detrás. 所 es omitible ante verbos bisílabos, no ante monosílabos. 为 = 被 (más literario).</p>
+        <ul class="ex">
+          <li><div class="zh-ex">我们都被眼前的美景所吸引。</div><div class="py">Wǒmen dōu bèi yǎnqián de měijǐng suǒ xīyǐn.</div><div class="gloss">Todos quedamos cautivados por la belleza que teníamos enfrente.</div></li>
+          <li><div class="zh-ex">他被好奇心（所）驱使，鼓起勇气决定下到洞底一探究竟。</div><div class="py">Tā bèi hàoqí xīn (suǒ) qūshǐ, gǔ qǐ yǒngqì juédìng xià dào dòng dǐ yī tàn jiùjìng.</div><div class="gloss">Impulsado por la curiosidad, se armó de valor y decidió bajar al fondo de la cueva a averiguar.</div></li>
+          <li><div class="zh-ex">整支队伍被风雪所阻。</div><div class="py">Zhěng zhī duìwǔ bèi fēngxuě suǒ zǔ.</div><div class="gloss">Todo el equipo quedó bloqueado por la nieve y el viento.</div></li>
+          <li><div class="zh-ex">年轻男女总是被情所困。</div><div class="py">Niánqīng nánnǚ zǒng shì bèi qíng suǒ kùn.</div><div class="gloss">Los jóvenes siempre quedan atrapados por el amor.</div></li>
+          <li><div class="zh-ex">别叹气，成年人总是会为生活所累。</div><div class="py">Bié tànqì, chéngnián rén zǒng shì huì wéi shēnghuó suǒ lèi.</div><div class="gloss">No suspires, los adultos siempre están agotados por la vida.</div></li>
+          <li><div class="zh-ex">你总是那么容易相信人，时常为表面现象所蒙蔽。</div><div class="py">Nǐ zǒng shì nàme róngyì xiāngxìn rén, shícháng wèi biǎomiàn xiànxiàng suǒ méngbì.</div><div class="gloss">Siempre confías tan fácil en la gente y a menudo te engañan las apariencias.</div></li>
+          <li><div class="zh-ex">"改革开放"政策的正确性已为实践所证明。</div><div class="py">"Gǎigé kāifàng" zhèngcè de zhèngquèxìng yǐ wèi shíjiàn suǒ zhèngmíng.</div><div class="gloss">La corrección de la política de "reforma y apertura" ya la ha probado la práctica.</div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ EJERCICIOS ============ -->
+  <div class="panel" id="p-e">
+    <div class="ex-sub" id="drillnav">
+      <button class="active" data-d="t1">Test 1</button>
+      <button data-d="t2">Test 2</button>
+      <button data-d="t3">Test 3</button>
+      <button data-d="t4">Test 4</button>
+      <button data-d="t5">Test 5</button>
+    </div>
+
+    <!-- TEST 1 -->
+    <div class="drill active" id="t1">
+      <div class="q" data-c="0"><div class="stem">A: 怎么了？　B: ___ 。</div><div class="opts">
+        <button class="opt">我的牛奶被他喝了</button><button class="opt">他被我的牛奶喝了</button><button class="opt">我被他的牛奶喝了</button><button class="opt">他的牛奶我被喝了</button></div>
+        <div class="fb"><div class="sol">我的牛奶被他喝了。</div>「我的牛奶」 es el paciente (sujeto); 「他」 el agente. S + 被 + O + V.</div></div>
+      <div class="q" data-c="1"><div class="stem">A: ___ ？　B: 我没有。</div><div class="opts">
+        <button class="opt">你被那本书借走了吗</button><button class="opt">那本书被你借走了吗</button><button class="opt">那本书你被借走了吗</button><button class="opt">那本书被借你走了吗</button></div>
+        <div class="fb"><div class="sol">那本书被你借走了吗？</div>「那本书」 paciente; 「你」 agente.</div></div>
+      <div class="q" data-c="2"><div class="stem">A: 怎么了？　B: ___ 。</div><div class="opts">
+        <button class="opt">哥哥叫我的自行车骑走了</button><button class="opt">我叫的自行车骑哥哥走了</button><button class="opt">我的自行车叫哥哥骑走了</button><button class="opt">我的自行车叫哥哥走骑了</button></div>
+        <div class="fb"><div class="sol">我的自行车叫哥哥骑走了。</div>「叫」 va tras el sujeto (paciente).</div></div>
+      <div class="q" data-c="1"><div class="stem">A: ___ ，对不起。　B: 没关系。</div><div class="opts">
+        <button class="opt">我叫你的笔记本弄坏了</button><button class="opt">你的笔记本叫我弄坏了</button><button class="opt">你的笔记本我叫弄坏了</button></div>
+        <div class="fb"><div class="sol">你的笔记本叫我弄坏了。</div>「你的笔记本」 paciente; 「我」 agente tras 叫.</div></div>
+      <div class="q" data-c="0"><div class="stem">A: 你去洗盘子，好吗？　B: ___ 。</div><div class="opts">
+        <button class="opt">盘子让爸爸洗干净了</button><button class="opt">爸爸让盘子洗干净了</button><button class="opt">爸爸洗盘子让干净了</button><button class="opt">爸爸让洗盘子干净了</button></div>
+        <div class="fb"><div class="sol">盘子让爸爸洗干净了。</div>「干净」 (resultado) va tras el verbo 洗.</div></div>
+    </div>
+
+    <!-- TEST 2 -->
+    <div class="drill" id="t2">
+      <div class="q" data-c="1"><div class="stem">她是这场官司的被告。→ ___ 。</div><div class="opts">
+        <button class="opt">她告了别人。</button><button class="opt">别人告了她。</button></div>
+        <div class="fb"><div class="sol">别人告了她。</div>被告 = ser acusado/demandado.</div></div>
+      <div class="q" data-c="1"><div class="stem">她的新电脑被盗了。→ ___ 。</div><div class="opts">
+        <button class="opt">她偷了别人的新电脑。</button><button class="opt">别人偷了她的新电脑。</button></div>
+        <div class="fb"><div class="sol">别人偷了她的新电脑。</div>被盗 = ser robado.</div></div>
+      <div class="q" data-c="0"><div class="stem">他已被迫调整了日程安排。→ ___ 。</div><div class="opts">
+        <button class="opt">他不想调整日程安排。</button><button class="opt">他想调整日程安排。</button></div>
+        <div class="fb"><div class="sol">他不想调整日程安排。</div>被迫 = ser forzado; no lo hizo por voluntad.</div></div>
+      <div class="q" data-c="0"><div class="stem">今天早上哥哥得知了朋友被害的消息。→ ___ 。</div><div class="opts">
+        <button class="opt">哥哥的朋友去世了。</button><button class="opt">哥哥的朋友受伤了。</button></div>
+        <div class="fb"><div class="sol">哥哥的朋友去世了。</div>被害 = ser asesinado.</div></div>
+      <div class="q" data-c="0"><div class="stem">经过警察的不懈努力，他终于被捕了。→ ___ 。</div><div class="opts">
+        <button class="opt">警察逮捕他了。</button><button class="opt">警察还没有逮捕他。</button></div>
+        <div class="fb"><div class="sol">警察逮捕他了。</div>被捕 = ser arrestado.</div></div>
+    </div>
+
+    <!-- TEST 3 (V/F) -->
+    <div class="drill" id="t3">
+      <div class="q" data-c="0"><div class="stem">快把礼物藏好，别让妈妈给看见了。</div><div class="opts">
+        <button class="opt">Correcta</button><button class="opt">Incorrecta</button></div>
+        <div class="fb">Correcta. S + neg.(别) + 让 + agente(妈妈) + 给 + V(看见) + 了.</div></div>
+      <div class="q" data-c="1"><div class="stem">你不要别人的话被影响了。</div><div class="opts">
+        <button class="opt">Correcta</button><button class="opt">Incorrecta</button></div>
+        <div class="fb"><div class="sol">你不要被别人的话给影响了。</div>被 debe ir antes del agente.</div></div>
+      <div class="q" data-c="1"><div class="stem">他给这个故事被吓到了。</div><div class="opts">
+        <button class="opt">Correcta</button><button class="opt">Incorrecta</button></div>
+        <div class="fb"><div class="sol">他被这个故事给吓到了。</div>被 va antes de 给.</div></div>
+      <div class="q" data-c="0"><div class="stem">我被蚊子给咬了，痒死了！</div><div class="opts">
+        <button class="opt">Correcta</button><button class="opt">Incorrecta</button></div>
+        <div class="fb">Correcta. S + 被 + agente(蚊子) + 给 + V(咬).</div></div>
+      <div class="q" data-c="0"><div class="stem">报纸早上让爸爸给带走了。</div><div class="opts">
+        <button class="opt">Correcta</button><button class="opt">Incorrecta</button></div>
+        <div class="fb">Correcta. 让…给 con agente 爸爸; 早上 puede ir antes o después del sujeto.</div></div>
+    </div>
+
+    <!-- TEST 4 -->
+    <div class="drill" id="t4">
+      <div class="q" data-c="2"><div class="stem">信 ___ 寄出去了吗？</div><div class="opts">
+        <button class="opt">让</button><button class="opt">叫</button><button class="opt">/ (nada)</button></div>
+        <div class="fb"><div class="sol">信寄出去了吗？</div>Pasiva no marcada, sin agente → sin partícula.</div></div>
+      <div class="q" data-c="1"><div class="stem">爷爷的花园 ___ 种满了向日葵。</div><div class="opts">
+        <button class="opt">叫</button><button class="opt">/ (nada)</button><button class="opt">让</button></div>
+        <div class="fb"><div class="sol">爷爷的花园种满了向日葵。</div>Sin agente → sin partícula.</div></div>
+      <div class="q" data-c="2"><div class="stem">饭 ___</div><div class="opts">
+        <button class="opt">还吃没完呢。</button><button class="opt">吃完还没呢。</button><button class="opt">还没吃完呢。</button></div>
+        <div class="fb"><div class="sol">饭还没吃完呢。</div>还没 antes del verbo; 完 resultado; 呢 al final.</div></div>
+      <div class="q" data-c="1"><div class="stem">报告 ___ 写完了，我马上送去给经理。</div><div class="opts">
+        <button class="opt">叫</button><button class="opt">/ (nada)</button><button class="opt">让</button></div>
+        <div class="fb"><div class="sol">报告写完了……</div>Pasiva no marcada → sin partícula.</div></div>
+      <div class="q" data-c="0"><div class="stem">那扇窗户还没 ___ 擦干净，再擦一遍吧。</div><div class="opts">
+        <button class="opt">/ (nada)</button><button class="opt">叫</button><button class="opt">让</button></div>
+        <div class="fb"><div class="sol">那扇窗户还没擦干净……</div>Pasiva no marcada negada → sin partícula.</div></div>
+    </div>
+
+    <!-- TEST 5 -->
+    <div class="drill" id="t5">
+      <div class="q" data-c="1"><div class="stem">这部电影太真实了，我们 ___ 。</div><div class="opts">
+        <button class="opt">被它所感动了</button><button class="opt">被它所感动</button><button class="opt">被感动</button><button class="opt">被所感动</button></div>
+        <div class="fb"><div class="sol">我们被它所感动。</div>被 + O + 所 + V, sin elementos tras el verbo; el objeto no se omite.</div></div>
+      <div class="q" data-c="2"><div class="stem">他整个人都被心底的恐惧所支配 ___ 。</div><div class="opts">
+        <button class="opt">了</button><button class="opt">着</button><button class="opt">/ (nada)</button><button class="opt">的</button></div>
+        <div class="fb"><div class="sol">……所支配。</div>Tras el verbo con 所 no van 了/着/的.</div></div>
+      <div class="q" data-c="0"><div class="stem">多少人为生活 ___ 累，为生活奔波。</div><div class="opts">
+        <button class="opt">所</button><button class="opt">被</button><button class="opt">为</button><button class="opt">/ (nada)</button></div>
+        <div class="fb"><div class="sol">多少人为生活所累……</div>Ya hay 为 antes de 生活 → falta 所 (为…所…).</div></div>
+      <div class="q" data-c="0"><div class="stem">他 ___ 生活所迫，不得不辍学去打工。</div><div class="opts">
+        <button class="opt">为</button><button class="opt">由</button><button class="opt">所</button><button class="opt">/ (nada)</button></div>
+        <div class="fb"><div class="sol">他为生活所迫……</div>为…所… → 为生活所迫.</div></div>
+      <div class="q" data-c="1"><div class="stem">那些…英雄们永远不会被人们 ___ 忘记。</div><div class="opts">
+        <button class="opt">为</button><button class="opt">所</button><button class="opt">被</button></div>
+        <div class="fb"><div class="sol">……被人们所忘记。</div>Ya hay 被 → falta 所 (被…所…).</div></div>
+    </div>
+  </div>
+
+  <!-- ============ LECTURA ============ -->
+  <div class="panel" id="p-l">
+    <div class="read">
+      <a class="rc" href="https://mandarinbean.com/an-email-thank-you-for-helping-me-move/" target="_blank" rel="noopener"><div class="zh">谢谢你帮我搬家</div></a>
+      <a class="rc" href="https://mandarinbean.com/how-to-get-to-peoples-park/" target="_blank" rel="noopener"><div class="zh">人民公园怎么走？</div></a>
+      <a class="rc" href="https://mandarinbean.com/a-letter-language-class/" target="_blank" rel="noopener"><div class="zh">一封信 —— 语言课</div></a>
+    </div>
+  </div>
+</div>
+
+<button id="pybtn"><span class="h">拼</span> Pinyin</button>
+
+<footer>
+  <b>Academia 连 Lian de Chino Mandarín</b> · 教学相长
+  <div class="lic">
+    Gramática y ejercicios: contenido original © 2026 <b>César Chávez Bonilla</b>, bajo licencia
+    <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.es" target="_blank" rel="noopener">CC BY-NC 4.0</a>.
+    Los textos de lectura son propiedad de <a href="https://mandarinbean.com/" target="_blank" rel="noopener">Mandarin Bean</a>; se enlazan a su sitio.
+  </div>
+</footer>
+
+<script>
+  const tabs=document.getElementById('tabs');
+  tabs.addEventListener('click',e=>{const b=e.target.closest('.tab'); if(!b)return;
+    tabs.querySelectorAll('.tab').forEach(t=>t.classList.remove('active')); b.classList.add('active');
+    document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+    document.getElementById('p-'+b.dataset.t).classList.add('active');
+    window.scrollTo({top:0,behavior:'smooth'});});
+  document.querySelectorAll('.acc-head').forEach(h=>h.addEventListener('click',()=>h.parentElement.classList.toggle('open')));
+  document.querySelectorAll('ul.ex li').forEach(li=>li.addEventListener('click',()=>li.classList.toggle('reveal')));
+  const dn=document.getElementById('drillnav');
+  dn.addEventListener('click',e=>{const b=e.target.closest('button'); if(!b)return;
+    dn.querySelectorAll('button').forEach(x=>x.classList.remove('active')); b.classList.add('active');
+    document.querySelectorAll('.drill').forEach(d=>d.classList.remove('active'));
+    document.getElementById(b.dataset.d).classList.add('active');});
+  document.querySelectorAll('.q').forEach(q=>{
+    const correct=+q.dataset.c; const opts=[...q.querySelectorAll('.opt')];
+    opts.forEach((o,i)=>o.addEventListener('click',()=>{
+      if(q.classList.contains('answered'))return;
+      q.classList.add('answered');
+      o.classList.add(i===correct?'correct':'wrong');
+      if(i!==correct) opts[correct].classList.add('correct');}));});
+  // pinyin toggle (autocontenido, con memoria)
+  const pyb=document.getElementById('pybtn');
+  if(localStorage.getItem('lian-pinyin')==='1') document.body.classList.add('show-pinyin');
+  pyb.addEventListener('click',()=>{const on=document.body.classList.toggle('show-pinyin');
+    try{localStorage.setItem('lian-pinyin',on?'1':'0');}catch(e){}});
+</script>
+</body>
+</html>
