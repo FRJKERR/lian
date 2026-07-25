@@ -1,0 +1,44 @@
+/* ============================================================
+   lian-theme.css · Tema Academia Lian (reskin de páginas legacy)
+   Se enlaza al FINAL del <head> para sobreescribir el CSS inline.
+   Reasigna la paleta y las fuentes al look nuevo del portal, sin
+   tocar el contenido. Ver canon en El Aula 03_ESTILO §9.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&display=swap');
+
+/* Paleta nueva sobre las mismas variables que ya usa la página */
+:root{
+  --paper:#FAF6F0; --paper-2:#F1E9DD; --paper-3:#E9DECB;
+  --ink:#221D18; --ink-soft:#6B6157;
+  --cinnabar:#E8402E; --cinnabar-deep:#B02B1E;
+  --gold:#CE9E3B;
+  --line:#E6DCCD; --line-soft:#EFE7DA;
+}
+
+/* Fondo limpio (sin patrón de puntos) y cuerpo en sans moderna */
+body{
+  background:var(--paper) !important;
+  background-image:none !important;
+  color:var(--ink) !important;
+  font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif !important;
+}
+
+/* Titulares y etiquetas en la display del portal */
+h1,h2,h3,h4,.kicker,.stamp,.stamp-sm,.num,.sub-label,.legend,.section-head,.lead{
+  font-family:"Space Grotesk",sans-serif !important;
+}
+
+/* Acentos y detalles */
+a{ color:var(--cinnabar); }
+.stamp,.dot{ box-shadow:none; }
+
+/* Nav compartida: ya usa las variables → adopta la paleta sola.
+   Reforzamos el pill activo con el bermellón nuevo. */
+.main-nav .nav-list a.activo{
+  background:var(--cinnabar) !important;
+  border-color:var(--cinnabar) !important;
+  box-shadow:2px 2px 0 var(--cinnabar-deep) !important;
+}
+
+/* Botón de pinyin flotante coherente */
+#pinyin-toggle-btn{ box-shadow:0 8px 24px -12px rgba(30,15,10,.5) !important; }
